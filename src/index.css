@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode - Clean modern with blue/indigo */
+    --background: 220 20% 98%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 230 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 220 12% 91%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 260 70% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 12% 95%;
+    --ring: 230 80% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --royal: 230 80% 55%;
+    --royal-light: 230 75% 65%;
+    --royal-dark: 230 85% 45%;
+    --violet: 260 70% 58%;
+    --violet-light: 260 65% 70%;
+    --silver: 220 15% 75%;
+    --midnight: 225 30% 12%;
+    --pearl: 220 20% 98%;
+
+    /* Gradients - Light */
+    --gradient-royal: linear-gradient(135deg, hsl(230 80% 55%), hsl(260 70% 58%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 20% 98%), hsl(220 15% 94%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 80% 55% / 0.08), hsl(260 70% 58% / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.95), hsl(220 15% 96% / 0.9));
+    --gradient-mesh: radial-gradient(at 20% 30%, hsl(230 80% 90% / 0.5) 0px, transparent 50%),
+                     radial-gradient(at 80% 10%, hsl(260 70% 90% / 0.4) 0px, transparent 50%),
+                     radial-gradient(at 10% 70%, hsl(230 80% 88% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 90% 80%, hsl(260 70% 88% / 0.3) 0px, transparent 50%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(230 80% 55% / 0.12) 0%, transparent 60%);
+    --gradient-chess: repeating-conic-gradient(hsl(220 15% 92%) 0% 25%, hsl(0 0% 100%) 0% 50%);
+    
+    /* Shadows - Light */
+    --shadow-royal: 0 4px 30px hsl(230 80% 55% / 0.15);
+    --shadow-card: 0 4px 24px hsl(220 30% 20% / 0.06), 0 1px 3px hsl(220 30% 20% / 0.04);
+    --shadow-glow: 0 0 60px hsl(230 80% 55% / 0.12);
+    --shadow-soft: 0 8px 40px hsl(220 30% 20% / 0.08);
+    --shadow-float: 0 20px 50px hsl(220 30% 20% / 0.12);
+
+    /* Fonts */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 25% 10%;
+    --sidebar-primary: 230 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 94%;
+    --sidebar-accent-foreground: 220 25% 20%;
+    --sidebar-border: 220 15% 88%;
+    --sidebar-ring: 230 80% 55%;
+  }
+
+  .dark {
+    --background: 225 30% 6%;
+    --foreground: 220 20% 95%;
+
+    --card: 225 28% 10%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 225 28% 10%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 230 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 25% 15%;
+    --secondary-foreground: 220 20% 90%;
+
+    --muted: 225 20% 18%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 260 65% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 20% 95%;
+
+    --border: 225 20% 18%;
+    --input: 225 20% 15%;
+    --ring: 230 75% 60%;
+
+    /* Custom tokens - Dark */
+    --royal: 230 75% 60%;
+    --royal-light: 230 70% 70%;
+    --royal-dark: 230 80% 50%;
+    --violet: 260 65% 62%;
+    --violet-light: 260 60% 72%;
+    --silver: 220 15% 60%;
+    --midnight: 225 30% 6%;
+    --pearl: 220 20% 95%;
+
+    /* Gradients - Dark */
+    --gradient-royal: linear-gradient(135deg, hsl(230 75% 60%), hsl(260 65% 62%));
+    --gradient-surface: linear-gradient(180deg, hsl(225 28% 10%), hsl(225 30% 6%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 75% 60% / 0.1), hsl(260 65% 62% / 0.08));
+    --gradient-card: linear-gradient(145deg, hsl(225 28% 12% / 0.9), hsl(225 30% 8% / 0.95));
+    --gradient-mesh: radial-gradient(at 20% 30%, hsl(230 75% 30% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 80% 10%, hsl(260 65% 30% / 0.12) 0px, transparent 50%),
+                     radial-gradient(at 10% 70%, hsl(230 75% 25% / 0.1) 0px, transparent 50%),
+                     radial-gradient(at 90% 80%, hsl(260 65% 25% / 0.1) 0px, transparent 50%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(230 75% 60% / 0.08) 0%, transparent 60%);
+    --gradient-chess: repeating-conic-gradient(hsl(225 25% 15%) 0% 25%, hsl(225 28% 10%) 0% 50%);
+    
+    /* Shadows - Dark */
+    --shadow-royal: 0 4px 30px hsl(230 75% 60% / 0.2);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 60px hsl(230 75% 60% / 0.15);
+    --shadow-soft: 0 8px 40px hsl(0 0% 0% / 0.3);
+    --shadow-float: 0 20px 50px hsl(0 0% 0% / 0.4);
+
+    --sidebar-background: 225 28% 10%;
+    --sidebar-foreground: 220 20% 95%;
+    --sidebar-primary: 230 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 25% 15%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 225 20% 18%;
+    --sidebar-ring: 230 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-card rounded-2xl;
+  }
+
+  .glass-card-strong {
+    @apply bg-card/95 backdrop-blur-2xl border border-border/30 rounded-2xl;
+    box-shadow: var(--shadow-float);
+  }
+
+  .gradient-text {
+    background: var(--gradient-royal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-float;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-500 hover:shadow-royal;
+  }
+
+  /* Chess-themed backgrounds */
+  .bg-mesh {
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
+  }
+
+  .bg-chess-pattern {
+    background-image: var(--gradient-chess);
+    background-size: 60px 60px;
+    opacity: 0.03;
+  }
+
+  /* Higher-contrast chessboard grid */
+  .bg-chess-board {
+    background-image:
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 50%, transparent 50%),
+      linear-gradient(0deg, hsl(var(--primary) / 0.08) 50%, transparent 50%),
+      linear-gradient(90deg, hsl(var(--border) / 0.12) 1px, transparent 1px),
+      linear-gradient(0deg, hsl(var(--border) / 0.12) 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 30px 30px, 30px 30px;
+    background-position: 0 0, 60px 60px, 0 0, 15px 15px;
+  }
+
+  .bg-glow {
+    background-image: var(--gradient-glow);
+  }
+
+  /* Chess piece floating animation */
+  .chess-piece {
+    @apply absolute text-primary/10 font-heading font-bold;
+    animation: chessPieceFloat 15s ease-in-out infinite;
+  }
+
+  /* Geometric patterns */
+  .pattern-grid {
+    background-image: linear-gradient(hsl(var(--border) / 0.2) 1px, transparent 1px),
+                      linear-gradient(90deg, hsl(var(--border) / 0.2) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+  }
+
+  /* Button gradients */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold 
+           transition-all duration-300 shadow-royal hover:shadow-float hover:scale-[1.02];
+  }
+}
+
+@layer utilities {
+  /* Chess piece movement animations */
+  @keyframes chessPieceFloat {
+    0%, 100% { 
+      transform: translateY(0) rotate(0deg); 
+      opacity: 0.14;
+    }
+    25% { 
+      transform: translateY(-38px) rotate(6deg); 
+      opacity: 0.2;
+    }
+    50% { 
+      transform: translateY(-22px) rotate(-4deg); 
+      opacity: 0.12;
+    }
+    75% { 
+      transform: translateY(-52px) rotate(9deg); 
+      opacity: 0.18;
+    }
+  }
+
+  @keyframes knightMove {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(20px, -40px); }
+    50% { transform: translate(40px, -20px); }
+    75% { transform: translate(20px, -60px); }
+  }
+
+  @keyframes rookSlide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+  }
+
+  @keyframes bishopDiagonal {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(25px, -25px); }
+  }
+
+  @keyframes queenGlide {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(20px, -20px) scale(1.05); }
+    66% { transform: translate(-10px, -30px) scale(0.98); }
+  }
+
+  @keyframes kingPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 hsl(var(--primary) / 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px 10px hsl(var(--primary) / 0.1); }
+  }
+
+  @keyframes pawnAdvance {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-knight { animation: knightMove 8s ease-in-out infinite; }
+  .animate-rook { animation: rookSlide 6s ease-in-out infinite; }
+  .animate-bishop { animation: bishopDiagonal 7s ease-in-out infinite; }
+  .animate-queen { animation: queenGlide 10s ease-in-out infinite; }
+  .animate-king { animation: kingPulse 4s ease-in-out infinite; }
+  .animate-pawn { animation: pawnAdvance 5s ease-in-out infinite; }
+
+  /* General animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-gradient {
+    animation: gradientShift 8s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  .animate-spin-slow {
+    animation: spin 30s linear infinite;
+  }
+
+  .animate-border {
+    animation: borderGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-28px); }
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes borderGlow {
+    0%, 100% { border-color: hsl(var(--primary) / 0.3); }
+    50% { border-color: hsl(var(--primary) / 0.6); }
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+}
