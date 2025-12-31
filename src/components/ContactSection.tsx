@@ -16,17 +16,17 @@ const ContactSection = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "contact@chessnation.com", href: "mailto:contact@chessnation.com" },
-    { icon: Phone, label: "Phone", value: "+977 9813639131", href: "tel:+9779813639131" },
-    { icon: MapPin, label: "Location", value: "Kathmandu, Nepal", href: null },
-  ];
+    { icon: Mail, label: "Email", value: "chessnation.us@gmail.com", href: "mailto:chessnation.us@gmail.com" },
+    { icon: Phone, label: "Phone", value: "7708 585756", href: "tel:7708585756" },
+    { icon: MapPin, label: "Location", value: "11340 Lakefield Dr, STE#200, Johns Creek, GA 30097", href: null },
+    ];
 
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
+    const socialLinks = [
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61570828734641", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "Youtube" },
-  ];
+    { icon: Youtube, href: "https://youtube.com/@chessnation_us?si=FZGjqDcHPHDhReRG", label: "Youtube" },
+    ];
 
   return (
     <section id="contact" className="py-28 relative overflow-hidden">
