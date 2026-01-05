@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Trophy, Users, Calendar, Sparkles, ArrowRight, Play } from "lucide-react";
+import { GraduationCap, Trophy, Cpu, Sparkles, ArrowRight } from "lucide-react";
 import ChessPieces from "@/components/ChessPieces";
 import { Link } from "react-router-dom";
 
@@ -26,48 +26,58 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-8 animate-fade-in backdrop-blur-sm">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span>Online Chess Tournaments</span>
+            <span>Training Tomorrow's Chess Talent</span>
             <Sparkles className="w-4 h-4" />
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-8 animate-slide-up leading-[1.1]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-8 animate-slide-up leading-[1.1]" data-testid="text-hero-title">
             <span className="text-foreground">Master the</span>
             <br />
             <span className="gradient-text">Royal Game</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-slide-up stagger-2 leading-relaxed">
-            Compete in world-class tournaments, challenge players globally, and rise through the ranks. 
-            Your path to chess mastery begins here.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-slide-up stagger-2" data-testid="text-hero-tagline">
+            Conquer the World
+          </p>
+          
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-slide-up stagger-2 leading-relaxed" data-testid="text-hero-description">
+            World-class coaching, competitive exposure, and cutting-edge chess technology. 
+            Your path to chess excellence begins here.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up stagger-3">
-            <Link to="/auth" className="contents">
-              <Button variant="hero" size="xl" className="group">
-                Get Started
+            <Link to="/training" className="contents">
+              <Button variant="hero" size="xl" className="group" data-testid="button-join-training">
+                Join Training
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Button variant="heroOutline" size="xl" className="group">
-              <Play className="w-5 h-5" />
-              Watch Live
-            </Button>
+            <Link to="/tournaments" className="contents">
+              <Button variant="heroOutline" size="xl" className="group" data-testid="button-view-tournaments">
+                View Tournaments
+              </Button>
+            </Link>
+            <Link to="/technology" className="contents">
+              <Button variant="heroOutline" size="xl" className="group" data-testid="button-explore-technology">
+                Explore Technology
+              </Button>
+            </Link>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 md:gap-6 mt-20 animate-slide-up stagger-4 max-w-3xl mx-auto">
+          {/* Core Pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-20 animate-slide-up stagger-4 max-w-4xl mx-auto">
             {[
-              { icon: Trophy, value: "150+", label: "Tournaments", color: "from-primary/20 to-primary/5" },
-              { icon: Users, value: "10K+", label: "Active Players", color: "from-accent/20 to-accent/5" },
-              { icon: Calendar, value: "$50K+", label: "Prize Pool", color: "from-primary/20 to-accent/5" },
-            ].map((stat, index) => (
-              <div key={index} className="group glass-card p-5 md:p-7 hover-lift cursor-default">
-                <div className={`w-12 h-12 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="w-6 h-6 text-primary" />
+              { icon: GraduationCap, title: "Training", description: "Structured programs for all levels", color: "from-primary/20 to-primary/5", link: "/training" },
+              { icon: Trophy, title: "Tournaments", description: "Professionally organized events", color: "from-accent/20 to-accent/5", link: "/tournaments" },
+              { icon: Cpu, title: "Technology", description: "ChessEvents.AI platform", color: "from-primary/20 to-accent/5", link: "/technology" },
+            ].map((pillar, index) => (
+              <Link key={index} to={pillar.link} className="group glass-card p-5 md:p-7 hover-lift cursor-pointer" data-testid={`card-pillar-${pillar.title.toLowerCase()}`}>
+                <div className={`w-12 h-12 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${pillar.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <pillar.icon className="w-6 h-6 text-primary" />
                 </div>
-                <span className="text-3xl md:text-4xl font-heading font-bold text-foreground block">{stat.value}</span>
-                <span className="text-sm text-muted-foreground mt-1 block">{stat.label}</span>
-              </div>
+                <span className="text-xl font-heading font-bold text-foreground block">{pillar.title}</span>
+                <span className="text-sm text-muted-foreground mt-1 block">{pillar.description}</span>
+              </Link>
             ))}
           </div>
         </div>

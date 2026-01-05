@@ -5,11 +5,14 @@ import { useTheme } from "@/hooks/use-theme";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "/#home" },
-  { name: "Tournaments", href: "/#tournaments" },
-  { name: "Results", href: "/#results" },
-  { name: "About", href: "/#about" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Home", href: "/" },
+  { name: "Training", href: "/training" },
+  { name: "Tournaments", href: "/tournaments" },
+  { name: "Technology", href: "/technology" },
+  { name: "Franchise", href: "/franchise" },
+  { name: "Initiatives", href: "/initiatives" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -36,7 +39,7 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/#home" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-royal group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <span className="text-xl text-primary-foreground font-bold">♔</span>
               <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -46,7 +49,7 @@ const Navbar = () => {
                 ChessNation
               </span>
               <span className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">
-                Play • Compete • Win
+                Train • Compete • Build
               </span>
             </div>
           </Link>
@@ -80,10 +83,10 @@ const Navbar = () => {
               } text-primary`} />
             </button>
 
-            <Link to="/auth" className="hidden sm:flex">
+            <Link to="/training" className="hidden sm:flex">
               <Button variant="hero" size="sm" className="gap-2">
                 <Sparkles className="w-4 h-4" />
-                Join Now
+                Join Training
               </Button>
             </Link>
 
@@ -118,10 +121,10 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4 mt-2 border-t border-border/20">
-                <Link to="/auth">
+                <Link to="/training">
                   <Button variant="hero" className="w-full">
                     <Sparkles className="w-4 h-4 mr-2" />
-                    Join Now
+                    Join Training
                   </Button>
                 </Link>
               </div>
