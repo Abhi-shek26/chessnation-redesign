@@ -1,8 +1,8 @@
-import { Mail, Phone, Menu, X, Sun, Moon, Sparkles } from "lucide-react";
+import { Menu, X, Sun, Moon, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTheme } from "@/hooks/use-theme";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -19,6 +19,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,15 +57,26 @@ const Navbar = () => {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1 bg-secondary/50 rounded-full px-2 py-1 backdrop-blur-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="relative px-4 py-2 text-muted-foreground hover:text-foreground font-medium transition-all rounded-full hover:bg-background/80"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={`relative px-4 py-2 font-medium transition-all rounded-full ${
+                    isActive 
+                      ? 'text-primary bg-primary/10 shadow-sm' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-background/80'
+                  }`}
+                  data-testid={`nav-link-${link.name.toLowerCase()}`}
+                >
+                  {link.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right side actions */}
@@ -109,17 +121,24 @@ const Navbar = () => {
         }`}>
           <div className="bg-card/98 backdrop-blur-2xl border-t border-border/20">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="px-4 py-3 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-all font-medium"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link, index) => {
+                const isActive = location.pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`px-4 py-3 rounded-xl transition-all font-medium ${
+                      isActive 
+                        ? 'text-primary bg-primary/10' 
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary/60'
+                    }`}
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <div className="pt-4 mt-2 border-t border-border/20">
                 <Link to="/login">
                   <Button variant="hero" className="w-full">

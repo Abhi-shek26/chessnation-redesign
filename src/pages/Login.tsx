@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Lock, User, ArrowRight } from "lucide-react";
+import chessBgImage from "@/assets/backgrounds/chess_pieces_login_background.png";
 
 const Login = () => {
   const { toast } = useToast();
@@ -41,8 +42,13 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-24 pb-16">
-        <section className="py-16 md:py-24">
+      <main className="pt-24 pb-16 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{ backgroundImage: `url(${chessBgImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-md mx-auto">
               <div className="text-center mb-8">

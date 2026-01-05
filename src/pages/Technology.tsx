@@ -4,13 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Cpu, Users, Trophy, BarChart3, ChevronRight, Zap, Shield, Globe } from "lucide-react";
+import technologyBgImage from "@/assets/backgrounds/chess_technology_page_background.png";
 
 const Technology = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-24">
-        <section className="py-16 md:py-24">
+      <main className="pt-24 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8"
+          style={{ backgroundImage: `url(${technologyBgImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">

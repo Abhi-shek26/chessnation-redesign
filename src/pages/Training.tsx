@@ -4,13 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { GraduationCap, Target, Trophy, Users, ChevronRight } from "lucide-react";
+import trainingBgImage from "@/assets/backgrounds/chess_training_page_background.png";
 
 const Training = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-24">
-        <section className="py-16 md:py-24">
+      <main className="pt-24 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8"
+          style={{ backgroundImage: `url(${trainingBgImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-training-title">
