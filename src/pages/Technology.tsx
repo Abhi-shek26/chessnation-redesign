@@ -12,7 +12,7 @@ const Technology = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${technologyBgImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
@@ -26,7 +26,7 @@ const Technology = () => {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-technology-title">
                 Technology for Chess
               </h1>
-              <p className="text-lg text-muted-foreground mb-8" data-testid="text-technology-subtitle">
+              <p className="text-lg" data-testid="text-technology-subtitle">
                 ChessNation is building cutting-edge chess technology to power the next generation 
                 of training, tournaments, and chess community engagement.
               </p>

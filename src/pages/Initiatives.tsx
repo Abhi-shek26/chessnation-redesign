@@ -35,7 +35,7 @@ const Initiatives = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${initiativesBgImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
@@ -45,7 +45,7 @@ const Initiatives = () => {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-initiatives-title">
                 Initiatives & Impact
               </h1>
-              <p className="text-lg text-muted-foreground mb-8" data-testid="text-initiatives-subtitle">
+              <p className="text-lg" data-testid="text-initiatives-subtitle">
                 Beyond training and tournaments, ChessNation is committed to building a sustainable 
                 chess ecosystem that creates lasting impact in our communities.
               </p>

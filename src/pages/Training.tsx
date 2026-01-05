@@ -12,7 +12,7 @@ const Training = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${trainingBgImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
@@ -22,7 +22,7 @@ const Training = () => {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-training-title">
                 Training Tomorrow's Chess Talent
               </h1>
-              <p className="text-lg text-muted-foreground mb-8" data-testid="text-training-subtitle">
+              <p className="text-lg" data-testid="text-training-subtitle">
                 At ChessNation, we believe chess excellence requires more than coaching—it requires 
                 structured development, competitive exposure, and a supportive community.
               </p>

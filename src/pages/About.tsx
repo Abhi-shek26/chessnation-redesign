@@ -12,7 +12,7 @@ const About = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${aboutBgImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
@@ -22,7 +22,7 @@ const About = () => {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-about-title">
                 About ChessNation
               </h1>
-              <p className="text-lg text-muted-foreground" data-testid="text-about-subtitle">
+              <p className="text-lg" data-testid="text-about-subtitle">
                 Master the Royal Game – Conquer the World
               </p>
             </div>
