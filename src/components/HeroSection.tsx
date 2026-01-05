@@ -46,7 +46,7 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up stagger-3">
-            <Link to="/training" className="contents">
+            <Link to="/login" className="contents">
               <Button variant="hero" size="xl" className="group" data-testid="button-join-training">
                 Join Training
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

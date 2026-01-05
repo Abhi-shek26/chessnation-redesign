@@ -83,7 +83,7 @@ const Navbar = () => {
               } text-primary`} />
             </button>
 
-            <Link to="/training" className="hidden sm:flex">
+            <Link to="/login" className="hidden sm:flex">
               <Button variant="hero" size="sm" className="gap-2">
                 <Sparkles className="w-4 h-4" />
                 Join Training
@@ -121,7 +121,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4 mt-2 border-t border-border/20">
-                <Link to="/training">
+                <Link to="/login">
                   <Button variant="hero" className="w-full">
                     <Sparkles className="w-4 h-4 mr-2" />
                     Join Training
