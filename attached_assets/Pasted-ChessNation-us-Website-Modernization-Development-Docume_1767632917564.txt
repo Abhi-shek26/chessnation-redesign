@@ -1,0 +1,99 @@
+ChessNation.us – Website Modernization & Development Document
+Prepared by: Dr. Antony Joseph (ChessNation)
+________________________________________
+1. Purpose of This Document
+This document serves as the developer-ready specification for modernizing the ChessNation.us website. It consolidates mission, positioning, page structure, content requirements, and functional expectations so development can proceed immediately with minimal ambiguity.
+Primary objectives: - Clearly position ChessNation as a training-first chess institution with a strong technology backbone - Support tournaments, training, franchise growth, and ecosystem initiatives - Deliver a modern, mobile-first, fast, and professional website
+________________________________________
+2. Mission & Positioning
+2.1 Primary Mission Statement
+ChessNation is focused on training and building tomorrow’s chess talents by combining world-class coaching, competitive exposure, and cutting-edge chess technology.
+2.2 Expanded Mission
+At ChessNation, our mission is to identify, train, and develop the next generation of chess talent through structured training programs, competitive pathways, and AI-powered chess technologies.
+We believe modern chess excellence requires more than coaching—it requires systems, exposure, and community. ChessNation bridges all of these into one unified ecosystem.
+2.3 Core Focus Pillars
+1.	Training Tomorrow’s Chess Talent
+2.	Technology for Chess (ChessEvents.AI)
+3.	Chess Ecosystem & Endowment Building
+2.4 Tagline (Primary)
+Master the Royal Game – Conquer the World
+Alternate (optional, secondary use): - Elite training meets chess technology - We build players. We build platforms. We build the future of chess - Train • Compete • Build
+________________________________________
+3. Target Audiences
+Primary: - Scholastic players and parents
+Secondary: - Tournament organizers - Franchise partners - Sponsors and donors - Coaches and collaborators
+________________________________________
+4. Site Architecture (MVP)
+Required Pages: 1. Home 2. Training 3. Tournaments 4. Technology 5. Franchise 6. Initiatives 7. About 8. Contact
+________________________________________
+5. Page Specifications
+5.1 Home Page
+Sections: - Hero (Mission + CTA) - Three Core Pillars (Training, Technology, Ecosystem) - Training Overview - Tournaments Overview - Technology (ChessEvents.AI teaser) - Franchise teaser - Footer with contact + social links
+Primary CTAs: - Join Training - View Tournaments - Explore Technology
+________________________________________
+5.2 Training Page
+Purpose: Convert visitors into training inquiries.
+Content: - Training philosophy - Structured development approach - Who the program is for - Tournament preparation emphasis - Clear inquiry CTA
+CTA: - Request Evaluation / Join Training
+________________________________________
+5.3 Tournaments Page
+Purpose: Central hub for all ChessNation tournaments.
+Sections: - Tournament overview - Categories: Scholastic, Open/Rated, Championships - Upcoming tournaments (static for MVP) - Signature events highlight - Tournament standards - Host a tournament CTA - Technology enablement teaser
+CTA: - View Upcoming Tournaments - Host a ChessNation Tournament
+________________________________________
+5.4 Technology Page (ChessEvents.AI)
+Purpose: Establish ChessNation as a chess technology leader.
+Content: - Technology vision - ChessEvents.AI overview - For Players - For Organizers - Roadmap teaser
+CTA: - Learn More / Get Early Access
+________________________________________
+5.5 Franchise Page
+Purpose: Enable scalable growth of training and tournaments.
+Franchise Models: - Training Franchise - Tournament Franchise - Hybrid Franchise
+Sections: - Franchise overview - Benefits - Technology enablement - High-level requirements - Application CTA
+CTA: - Apply for Franchise
+________________________________________
+5.6 Initiatives Page
+Purpose: Showcase ecosystem and endowment-building efforts.
+Content: - Women & Girls initiatives - Regional championships - Community impact - Sponsorship alignment
+CTA: - Partner with ChessNation - Support an Initiative
+________________________________________
+5.7 About Page
+Content: - Mission & vision - Leadership overview - Why ChessNation
+________________________________________
+5.8 Contact Page
+Contact Information (must be displayed exactly):
+Email: chessnation.us@gmail.com Phone: 7708 585756
+Location: 11340 Lakefield Dr, STE#200 Johns Creek, GA 30097
+Social Links: - YouTube: https://youtube.com/@chessnation_us?si=FZGjqDcHPHDhReRG - Facebook: https://www.facebook.com/profile.php?id=61570828734641
+Contact Form Fields: - Name - Email - Phone (optional) - Interest (Training / Tournaments / Franchise / Technology / General) - Message
+Form submissions should notify chessnation.us@gmail.com.
+________________________________________
+6. Technical Requirements
+Recommended Stack: - Next.js (App Router) - TypeScript - Tailwind CSS - Vercel deployment
+Requirements: - Mobile-first responsive design - SEO-ready metadata - Optimized images - Fast load times - Clean, modular components
+Content Management (MVP): - Static content via structured config/JSON - CMS optional in Phase 2
+________________________________________
+7. Functional Requirements
+•	Working contact form with success/error states
+•	Clear CTAs on all pages
+•	Easy future integration with ChessEvents.AI
+•	No placeholder text in production
+________________________________________
+8. Deliverables
+MVP Deliverables: - Fully functional modern website - All pages implemented - Deployed URL + source repository
+Phase 2 (Optional): - Live tournament calendar - Registration & payments - Franchise portal - CMS integration
+________________________________________
+9. Acceptance Criteria
+•	Mission and pillars visible within first scroll on Home
+•	All CTAs functional
+•	Contact form delivers reliably
+•	Mobile and desktop layouts verified
+•	Performance and accessibility scores acceptable
+________________________________________
+10. People / Process / Tools / Relevant Experience
+People: - Owner / SME: Dr. Antony Joseph - Web Developer(s)
+Process: - MVP build → review → iterate
+Tools: - Next.js, Tailwind, GitHub, Vercel, Email service
+Relevant Experience: - Scholastic chess training - Regional and championship tournaments - AI-based chess platform development - Ecosystem and initiative building
+________________________________________
+End of Document
