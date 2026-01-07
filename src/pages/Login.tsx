@@ -51,11 +51,11 @@ const Login = () => {
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-md mx-auto">
-              <div className="text-center mb-8">
+              <div className="text-center mb-8 glass-panel-strong p-6 rounded-xl">
                 <h1 className="text-3xl md:text-4xl font-heading font-bold mb-4" data-testid="text-login-title">
                   Welcome to ChessNation
                 </h1>
-                <p>
+                <p className="text-muted-foreground">
                   Sign in to access training programs, tournaments, and more.
                 </p>
               </div>

@@ -18,7 +18,7 @@ const Technology = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                 <Cpu className="w-4 h-4" />
                 <span className="text-sm font-medium">ChessEvents.AI</span>
@@ -26,7 +26,7 @@ const Technology = () => {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-technology-title">
                 Technology for Chess
               </h1>
-              <p className="text-lg" data-testid="text-technology-subtitle">
+              <p className="text-lg text-muted-foreground mb-6" data-testid="text-technology-subtitle">
                 ChessNation is building cutting-edge chess technology to power the next generation 
                 of training, tournaments, and chess community engagement.
               </p>

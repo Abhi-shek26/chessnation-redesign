@@ -46,11 +46,11 @@ const Tournaments = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-tournaments-title">
                 ChessNation Tournaments
               </h1>
-              <p className="text-lg" data-testid="text-tournaments-subtitle">
+              <p className="text-lg text-muted-foreground mb-6" data-testid="text-tournaments-subtitle">
                 Experience professionally organized chess competitions with fair play standards, 
                 accurate ratings, and a welcoming atmosphere for players of all levels.
               </p>

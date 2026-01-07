@@ -42,6 +42,9 @@
     --royal-light: 230 75% 65%;
     --royal-dark: 230 85% 45%;
     --violet: 260 70% 58%;
+    --golden: 42 90% 50%;
+    --golden-light: 45 95% 55%;
+    --golden-dark: 38 85% 45%;
     --violet-light: 260 65% 70%;
     --silver: 220 15% 75%;
     --midnight: 225 30% 12%;
@@ -114,6 +117,9 @@
     --royal-light: 230 70% 70%;
     --royal-dark: 230 80% 50%;
     --violet: 260 65% 62%;
+    --golden: 42 90% 55%;
+    --golden-light: 45 95% 60%;
+    --golden-dark: 38 85% 50%;
     --violet-light: 260 60% 72%;
     --silver: 220 15% 60%;
     --midnight: 225 30% 6%;
@@ -182,6 +188,22 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .golden-text {
+    background: linear-gradient(135deg, hsl(var(--golden)) 0%, hsl(var(--golden-light)) 50%, hsl(var(--golden-dark)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px hsl(var(--golden) / 0.3);
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-md bg-background/70 border border-border/30 rounded-xl;
+  }
+
+  .glass-panel-strong {
+    @apply backdrop-blur-xl bg-background/80 border border-border/40 rounded-xl shadow-lg;
   }
 
   .hover-lift {

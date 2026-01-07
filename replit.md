@@ -82,9 +82,15 @@ Static deployment configured:
 
 ## Recent Changes
 - January 2026: Complete website modernization
-  - Updated to 8-page architecture
+  - Updated to 9-page architecture (added Gallery page)
   - New mission and positioning focused on training
   - Added ChessEvents.AI technology section
   - Added Franchise and Initiatives pages
+  - Added Gallery page with 6 AI-generated facility images
   - Updated contact information
   - New navigation structure
+  - Hero section with golden "Royal" text and enlarged "Conquer the World"
+  - Glass-panel styling (glass-panel-strong) on all page headers for improved readability
+  - Background images visible at 50% opacity with gradient overlay
+  - EmailJS integration for contact form (requires VITE_EMAILJS_* env vars)
+  - Login page with coming soon placeholder

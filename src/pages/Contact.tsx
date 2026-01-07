@@ -11,7 +11,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Mail, Phone, MapPin, Youtube, Facebook, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import contactBgImage from "@/assets/backgrounds/chess_contact_page_background.png";
 
 const contactSchema = z.object({
@@ -27,6 +28,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -41,7 +43,41 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    try {
+    
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (serviceId && templateId && publicKey) {
+      try {
+        await emailjs.send(
+          serviceId,
+          templateId,
+          {
+            from_name: data.name,
+            from_email: data.email,
+            phone: data.phone || "Not provided",
+            interest: data.interest,
+            message: data.message,
+            to_email: "chessnation.us@gmail.com",
+          },
+          publicKey
+        );
+
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for contacting ChessNation. We'll get back to you soon.",
+        });
+        form.reset();
+      } catch (error) {
+        console.error("EmailJS error:", error);
+        toast({
+          title: "Error sending message",
+          description: "There was a problem sending your message. Please try again or email us directly.",
+          variant: "destructive",
+        });
+      }
+    } else {
       const mailtoLink = `mailto:chessnation.us@gmail.com?subject=ChessNation Inquiry - ${data.interest}&body=Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0APhone: ${data.phone || 'Not provided'}%0D%0AInterest: ${data.interest}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(data.message)}`;
       window.location.href = mailtoLink;
       
@@ -50,15 +86,9 @@ const Contact = () => {
         description: "Your default email client should open with the message prepared.",
       });
       form.reset();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem. Please try emailing us directly at chessnation.us@gmail.com",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
     }
+    
+    setIsSubmitting(false);
   };
 
   return (
@@ -72,11 +102,11 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-contact-title">
                 Contact Us
               </h1>
-              <p className="text-lg" data-testid="text-contact-subtitle">
+              <p className="text-lg text-muted-foreground" data-testid="text-contact-subtitle">
                 Ready to start your chess journey? Have questions about our programs? 
                 We'd love to hear from you.
               </p>
