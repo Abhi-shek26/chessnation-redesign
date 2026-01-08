@@ -42,9 +42,9 @@
     --royal-light: 230 75% 65%;
     --royal-dark: 230 85% 45%;
     --violet: 260 70% 58%;
-    --golden: 42 90% 50%;
-    --golden-light: 45 95% 55%;
-    --golden-dark: 38 85% 45%;
+    --golden: 45 100% 51%;
+    --golden-light: 48 100% 62%;
+    --golden-dark: 40 100% 42%;
     --violet-light: 260 65% 70%;
     --silver: 220 15% 75%;
     --midnight: 225 30% 12%;
@@ -117,9 +117,9 @@
     --royal-light: 230 70% 70%;
     --royal-dark: 230 80% 50%;
     --violet: 260 65% 62%;
-    --golden: 42 90% 55%;
-    --golden-light: 45 95% 60%;
-    --golden-dark: 38 85% 50%;
+    --golden: 45 100% 55%;
+    --golden-light: 48 100% 65%;
+    --golden-dark: 40 100% 45%;
     --violet-light: 260 60% 72%;
     --silver: 220 15% 60%;
     --midnight: 225 30% 6%;
@@ -191,11 +191,11 @@
   }
 
   .golden-text {
-    background: linear-gradient(135deg, hsl(var(--golden)) 0%, hsl(var(--golden-light)) 50%, hsl(var(--golden-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--golden-dark)) 0%, hsl(var(--golden)) 35%, hsl(var(--golden-light)) 65%, hsl(var(--golden)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 30px hsl(var(--golden) / 0.3);
+    filter: drop-shadow(0 2px 4px hsl(var(--golden-dark) / 0.5));
   }
 
   .glass-panel {

@@ -96,7 +96,7 @@ const Navbar = () => {
               } text-primary`} />
             </button>
 
-            <Link to="/login" className="hidden sm:flex">
+            <Link to="/contact" className="hidden sm:flex">
               <Button variant="hero" size="sm" className="gap-2">
                 <Sparkles className="w-4 h-4" />
                 Join Training
