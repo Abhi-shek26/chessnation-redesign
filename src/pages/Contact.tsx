@@ -56,6 +56,8 @@ const Contact = () => {
           {
             from_name: data.name,
             from_email: data.email,
+            reply_to: data.email,
+            user_email: data.email,
             phone: data.phone || "Not provided",
             interest: data.interest,
             message: data.message,
