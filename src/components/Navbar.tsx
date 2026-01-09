@@ -46,13 +46,13 @@ const Navbar = () => {
             <img 
               src={logoImage} 
               alt="ChessNation Logo" 
-              className="w-14 h-14 object-contain group-hover:scale-105 transition-all duration-300"
+              className="w-12 h-12 object-contain group-hover:scale-105 transition-all duration-300"
             />
             <div className="flex flex-col">
               <span className="font-heading text-xl font-bold gradient-text leading-tight">
                 ChessNation
               </span>
-              <span className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">
+              <span className="text-[9px] text-muted-foreground font-medium tracking-wider uppercase whitespace-nowrap">
                 Train • Compete • Master
               </span>
             </div>
