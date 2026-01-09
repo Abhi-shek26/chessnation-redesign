@@ -46,7 +46,7 @@ const Navbar = () => {
             <img 
               src={logoImage} 
               alt="ChessNation Logo" 
-              className="w-20 h-20 object-contain group-hover:scale-105 transition-all duration-300"
+              className="w-14 h-14 object-contain group-hover:scale-105 transition-all duration-300"
             />
             <div className="flex flex-col">
               <span className="font-heading text-xl font-bold gradient-text leading-tight">
