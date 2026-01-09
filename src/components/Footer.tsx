@@ -35,7 +35,7 @@ const Footer = () => {
               />
               <div>
                 <span className="font-heading text-2xl font-bold gradient-text block leading-tight">ChessNation</span>
-                <span className="text-xs text-muted-foreground font-medium tracking-wider uppercase">Train • Compete • Build</span>
+                <span className="text-xs text-muted-foreground font-medium tracking-wider uppercase">Train • Compete • Master</span>
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">

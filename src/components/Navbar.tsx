@@ -53,7 +53,7 @@ const Navbar = () => {
                 ChessNation
               </span>
               <span className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">
-                Train • Compete • Build
+                Train • Compete • Master
               </span>
             </div>
           </Link>
