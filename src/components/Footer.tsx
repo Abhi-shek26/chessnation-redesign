@@ -27,18 +27,18 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-3 mb-6">
               <img 
                 src={logoImage} 
                 alt="ChessNation Logo" 
-                className="w-24 h-24 object-contain"
+                className="w-36 h-36 object-contain"
               />
-              <div className="flex flex-col">
-                <span className="font-heading text-3xl font-bold gradient-text leading-tight">ChessNation</span>
-                <span className="text-sm text-muted-foreground font-medium tracking-wider uppercase">Train • Compete • Master</span>
+              <div>
+                <span className="font-heading text-2xl font-bold gradient-text block leading-tight">ChessNation</span>
+                <span className="text-xs text-muted-foreground font-medium tracking-wider uppercase whitespace-nowrap">Train • Compete • Master</span>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+            <p className="text-muted-foreground mb-6 max-w-lg leading-relaxed">
               Training and building tomorrow's chess talents through world-class coaching, 
               competitive exposure, and cutting-edge technology.
             </p>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="ml-8">
             <h4 className="font-heading font-bold mb-6 text-foreground">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
