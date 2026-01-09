@@ -127,7 +127,7 @@ const Contact = () => {
                       <h3 className="font-medium mb-1">Email</h3>
                       <a 
                         href="mailto:chessnation.us@gmail.com" 
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="hover:text-primary transition-colors"
                         data-testid="link-email"
                       >
                         chessnation.us@gmail.com
@@ -143,7 +143,7 @@ const Contact = () => {
                       <h3 className="font-medium mb-1">Phone</h3>
                       <a 
                         href="tel:7708585756" 
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="hover:text-primary transition-colors"
                         data-testid="link-phone"
                       >
                         (770) 858-5756
@@ -157,7 +157,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Location</h3>
-                      <p className="text-muted-foreground" data-testid="text-address">
+                      <p data-testid="text-address">
                         11340 Lakefield Dr, STE#200<br />
                         Johns Creek, GA 30097
                       </p>

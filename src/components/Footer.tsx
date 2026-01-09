@@ -1,5 +1,6 @@
 import { ArrowUpRight, Mail, Phone, MapPin, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -27,13 +28,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-royal">
-                <span className="text-xl text-primary-foreground font-bold">♔</span>
-              </div>
-              <div>
-                <span className="font-heading text-2xl font-bold gradient-text block leading-tight">ChessNation</span>
-                <span className="text-xs text-muted-foreground font-medium tracking-wider uppercase">Train • Compete • Build</span>
-              </div>
+              <img 
+                src={logoImage} 
+                alt="ChessNation Logo" 
+                className="w-16 h-16 object-contain"
+              />
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Training and building tomorrow's chess talents through world-class coaching, 

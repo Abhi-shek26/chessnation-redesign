@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTheme } from "@/hooks/use-theme";
 import { Link, useLocation } from "react-router-dom";
+import logoImage from "@/assets/logo.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -41,19 +42,12 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-royal group-hover:scale-105 transition-all duration-300 overflow-hidden">
-              <span className="text-xl text-primary-foreground font-bold">♔</span>
-              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-xl font-bold gradient-text leading-tight">
-                ChessNation
-              </span>
-              <span className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">
-                Train • Compete • Build
-              </span>
-            </div>
+          <Link to="/" className="flex items-center gap-2 group">
+            <img 
+              src={logoImage} 
+              alt="ChessNation Logo" 
+              className="w-12 h-12 object-contain group-hover:scale-105 transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop nav */}

@@ -33,7 +33,7 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-8 animate-slide-up leading-[1.1]" data-testid="text-hero-title">
             <span className="text-foreground">Master the</span>
             <br />
-            <span className="golden-text">Royal</span>{" "}
+            <span className="gradient-text">Royal</span>{" "}
             <span className="gradient-text">Game</span>
           </h1>
           
