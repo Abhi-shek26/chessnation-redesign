@@ -61,7 +61,7 @@ const Contact = () => {
             phone: data.phone || "Not provided",
             interest: data.interest,
             message: data.message,
-            to_email: "chessnation.us@gmail.com",
+            to_email: "chessnation2.us@gmail.com",
           },
           publicKey
         );
@@ -80,7 +80,7 @@ const Contact = () => {
         });
       }
     } else {
-      const mailtoLink = `mailto:chessnation.us@gmail.com?subject=ChessNation Inquiry - ${data.interest}&body=Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0APhone: ${data.phone || 'Not provided'}%0D%0AInterest: ${data.interest}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(data.message)}`;
+      const mailtoLink = `mailto:chessnation2.us@gmail.com?subject=ChessNation Inquiry - ${data.interest}&body=Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0APhone: ${data.phone || 'Not provided'}%0D%0AInterest: ${data.interest}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(data.message)}`;
       window.location.href = mailtoLink;
       
       toast({
