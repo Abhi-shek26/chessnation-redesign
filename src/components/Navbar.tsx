@@ -42,12 +42,20 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={logoImage} 
               alt="ChessNation Logo" 
-              className="w-12 h-12 object-contain group-hover:scale-105 transition-all duration-300"
+              className="w-11 h-11 object-contain group-hover:scale-105 transition-all duration-300"
             />
+            <div className="flex flex-col">
+              <span className="font-heading text-xl font-bold gradient-text leading-tight">
+                ChessNation
+              </span>
+              <span className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">
+                Train • Compete • Build
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}

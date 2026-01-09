@@ -31,8 +31,12 @@ const Footer = () => {
               <img 
                 src={logoImage} 
                 alt="ChessNation Logo" 
-                className="w-16 h-16 object-contain"
+                className="w-14 h-14 object-contain"
               />
+              <div>
+                <span className="font-heading text-2xl font-bold gradient-text block leading-tight">ChessNation</span>
+                <span className="text-xs text-muted-foreground font-medium tracking-wider uppercase">Train • Compete • Build</span>
+              </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Training and building tomorrow's chess talents through world-class coaching, 
