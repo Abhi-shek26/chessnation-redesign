@@ -1,0 +1,89 @@
+WEBSITE CHANGE REQUEST – ChessNation.us
+1️⃣ Gallery Page Updates
+Remove the following sections completely:
+•	❌ Welcome Area
+•	❌ Technology Lab
+Rationale:
+These sections no longer reflect the current operating model and create confusion.
+________________________________________
+2️⃣ Training Model – Online First (High Priority)
+Update all training visuals and messaging to reflect that training is primarily ONLINE.
+Requirements:
+•	Replace any physical classroom / lab imagery.
+•	Use AI-generated images showing:
+o	Online chess coaching
+o	Virtual chess boards
+o	Coach + student interaction over video
+o	Digital analysis dashboards
+
+
+
+4
+Text guidance (example – developer can refine):
+“ChessNation training is primarily delivered online through structured coaching, live analysis, and AI-assisted game review, enabling students to train globally with top mentors.”
+________________________________________
+3️⃣ Pricing Section Update
+Replace all pricing tables or fixed amounts with:
+“For pricing and enrollment details, please contact our Chess Training Coordinator.”
+Important:
+•	❌ Do NOT show prices
+•	❌ Do NOT show plans or tiers
+•	✅ Include a Contact / Inquiry CTA button
+________________________________________
+4️⃣ Leadership & Name References
+Immediate removal required:
+•	❌ Any personal name references
+•	❌ Leadership / Founder / Bio sections
+Replace with neutral positioning (optional text):
+“ChessNation is supported by a network of experienced coaches, mentors, and organizers focused on long-term player development.”
+________________________________________
+5️⃣ Sponsorship Section (New / Expanded)
+Rename section to:
+♟️ Sponsorship Opportunities
+Add the following sponsorship options:
+A. Sponsor a Chess Student
+•	Support promising scholastic or junior players
+•	Enable access to elite coaching, tournaments, and training resources
+B. Become a Tournament Sponsor
+•	Sponsor ChessNation-hosted tournaments and circuits
+Explicitly list sponsor benefits:
+•	Brand & logo placement on tournament materials
+•	Product / merchandise display at events
+•	Visibility on ChessNation website & digital promotions
+•	Recognition during live streams and announcements
+•	Association with youth talent development & excellence
+________________________________________
+6️⃣ Hall of Fame Section (New)
+Purpose: Long-term recognition & legacy branding
+Content to include:
+•	Permanent engraved recognition at:
+o	Training centers
+o	Tournament halls
+•	Digital Hall of Fame page
+•	Sponsor / contributor mentions across:
+o	Website
+o	Tournament banners
+o	Marketing collateral
+•	Recognition during major championships and ceremonies
+Tone: Prestige, legacy, and long-term visibility
+________________________________________
+7️⃣ Training Games Section (New)
+Add a dedicated section titled:
+♞ Training Games & Practice Matches
+Description:
+•	ChessNation arranges training games against:
+o	Peers
+o	Stronger opponents
+o	Thematic positions
+•	Games may be:
+o	Online
+o	Coach-supervised
+o	Followed by structured analysis
+CTA text:
+“To request training games, please contact us with player details and availability.”
+________________________________________
+🧭 Implementation Notes for Developer
+•	Use AI-generated imagery only for new visuals
+•	Keep all text neutral, professional, and scalable
+•	Avoid exposing internal structure, leadership, or proprietary strategy
+•	Ensure sections are modular (easy to expand later)

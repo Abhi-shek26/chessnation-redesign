@@ -11,6 +11,7 @@ import Tournaments from "./pages/Tournaments";
 import Technology from "./pages/Technology";
 import Franchise from "./pages/Franchise";
 import Initiatives from "./pages/Initiatives";
+import Sponsorship from "./pages/Sponsorship";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/technology" element={<Technology />} />
             <Route path="/franchise" element={<Franchise />} />
             <Route path="/initiatives" element={<Initiatives />} />
+            <Route path="/sponsorship" element={<Sponsorship />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

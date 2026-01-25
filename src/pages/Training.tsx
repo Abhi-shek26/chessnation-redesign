@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { GraduationCap, Target, Trophy, Users, ChevronRight } from "lucide-react";
+import { Target, Users, ChevronRight, Monitor, Video, Brain, MessageSquare, Gamepad2 } from "lucide-react";
 import trainingBgImage from "@/assets/backgrounds/chess_training_page_background.png";
 
 const Training = () => {
@@ -20,11 +20,12 @@ const Training = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-training-title">
-                Training Tomorrow's Chess Talent
+                Online Chess Training Excellence
               </h1>
               <p className="text-lg text-muted-foreground mb-6" data-testid="text-training-subtitle">
-                At ChessNation, we believe chess excellence requires more than coaching—it requires 
-                structured development, competitive exposure, and a supportive community.
+                ChessNation training is primarily delivered online through structured coaching, 
+                live analysis, and AI-assisted game review, enabling students to train globally 
+                with top mentors.
               </p>
               <Link to="/contact">
                 <Button variant="hero" size="lg" data-testid="button-request-evaluation">
@@ -37,36 +38,36 @@ const Training = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <Card>
                 <CardContent className="p-8">
-                  <GraduationCap className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Training Philosophy</h3>
+                  <Video className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">Live Online Coaching</h3>
                   <p className="text-muted-foreground">
-                    Our approach combines classical chess principles with modern analytical techniques. 
-                    We focus on building strong fundamentals while developing each player's unique style 
-                    and strategic thinking capabilities.
+                    Interactive one-on-one and group sessions via video with experienced coaches. 
+                    Real-time instruction, position analysis, and immediate feedback from anywhere 
+                    in the world.
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="p-8">
-                  <Target className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Structured Development</h3>
+                  <Brain className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">AI-Assisted Analysis</h3>
                   <p className="text-muted-foreground">
-                    Every student follows a personalized development path based on their current level, 
-                    goals, and learning style. We track progress meticulously and adjust training 
-                    programs to maximize improvement.
+                    Leverage cutting-edge AI tools for game review and pattern recognition. 
+                    Our digital analysis dashboards help identify weaknesses and track improvement 
+                    over time.
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="p-8">
-                  <Trophy className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Tournament Preparation</h3>
+                  <Monitor className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">Virtual Chess Boards</h3>
                   <p className="text-muted-foreground">
-                    Competitive play is essential for growth. We prepare students for tournament 
-                    success with opening preparation, time management training, and psychological 
-                    readiness coaching.
+                    Train on interactive virtual boards with real-time notation, move suggestions, 
+                    and instant position setup. Practice openings, tactics, and endgames with 
+                    modern digital tools.
                   </p>
                 </CardContent>
               </Card>
@@ -77,12 +78,72 @@ const Training = () => {
                   <h3 className="text-xl font-semibold mb-3">Who Is This For?</h3>
                   <p className="text-muted-foreground">
                     Our programs serve scholastic players of all levels—from beginners learning the 
-                    basics to advanced players preparing for national championships. Parents seeking 
-                    quality chess education for their children will find a supportive environment here.
+                    basics to advanced players preparing for national championships. Students can 
+                    join from anywhere with an internet connection.
                   </p>
                 </CardContent>
               </Card>
             </div>
+
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl p-8 md:p-12 mb-16 border border-border">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-center">
+                Pricing & Enrollment
+              </h2>
+              <p className="text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
+                For pricing and enrollment details, please contact our Chess Training Coordinator.
+              </p>
+              <div className="flex justify-center">
+                <Link to="/contact">
+                  <Button variant="hero" size="lg" data-testid="button-pricing-inquiry">
+                    <MessageSquare className="w-5 h-5 mr-2" />
+                    Contact for Pricing
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <Card className="mb-16" data-testid="card-training-games">
+              <CardContent className="p-8 md:p-12">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
+                      Training Games & Practice Matches
+                    </h2>
+                    <p className="text-muted-foreground mb-4">
+                      ChessNation arranges training games against peers, stronger opponents, and 
+                      thematic positions to accelerate your improvement.
+                    </p>
+                    <ul className="space-y-2 text-muted-foreground mb-6">
+                      <li className="flex items-center gap-2">
+                        <span className="w-2 h-2 bg-primary rounded-full"></span>
+                        Online games with coach supervision
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="w-2 h-2 bg-primary rounded-full"></span>
+                        Matches against appropriately rated opponents
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="w-2 h-2 bg-primary rounded-full"></span>
+                        Structured post-game analysis sessions
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="w-2 h-2 bg-primary rounded-full"></span>
+                        Thematic position practice for opening preparation
+                      </li>
+                    </ul>
+                    <Link to="/contact">
+                      <Button variant="outline" data-testid="button-request-games">
+                        <MessageSquare className="w-4 h-4 mr-2" />
+                        Request Training Games
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
             <div className="bg-secondary/30 rounded-xl p-8 md:p-12 text-center">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">

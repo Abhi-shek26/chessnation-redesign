@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Target, Eye, Award, ChevronRight } from "lucide-react";
+import { Target, Eye, Users, ChevronRight, GraduationCap, Zap, Building2 } from "lucide-react";
 import aboutBgImage from "@/assets/backgrounds/chess_about_page_background.png";
 
 const About = () => {
@@ -67,7 +67,7 @@ const About = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">♟</span>
+                    <GraduationCap className="w-8 h-8 text-primary" />
                   </div>
                   <h4 className="font-semibold mb-2">Training Tomorrow's Chess Talent</h4>
                   <p className="text-sm text-muted-foreground">
@@ -76,7 +76,7 @@ const About = () => {
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">⚡</span>
+                    <Zap className="w-8 h-8 text-primary" />
                   </div>
                   <h4 className="font-semibold mb-2">Technology for Chess</h4>
                   <p className="text-sm text-muted-foreground">
@@ -85,7 +85,7 @@ const About = () => {
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🏛</span>
+                    <Building2 className="w-8 h-8 text-primary" />
                   </div>
                   <h4 className="font-semibold mb-2">Chess Ecosystem & Endowment</h4>
                   <p className="text-sm text-muted-foreground">
@@ -98,16 +98,14 @@ const About = () => {
             <Card className="mb-16">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row items-start gap-6">
-                  <Award className="w-16 h-16 text-primary flex-shrink-0" />
+                  <Users className="w-16 h-16 text-primary flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Leadership</h3>
-                    <h4 className="text-lg font-medium mb-4">Dr. Antony Joseph – Founder</h4>
+                    <h3 className="text-xl font-semibold mb-4">Our Team</h3>
                     <p className="text-muted-foreground">
-                      Dr. Antony Joseph founded ChessNation with a vision to create a comprehensive 
-                      chess development ecosystem. With experience in scholastic chess training, 
-                      regional and championship tournaments, and AI-based chess platform development, 
-                      Dr. Joseph brings both technical expertise and a deep passion for developing 
-                      young chess talent.
+                      ChessNation is supported by a network of experienced coaches, mentors, and 
+                      organizers focused on long-term player development. Our team brings together 
+                      expertise in scholastic chess training, tournament organization, and chess 
+                      technology to create a comprehensive development ecosystem.
                     </p>
                   </div>
                 </div>

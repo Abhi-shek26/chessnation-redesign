@@ -1,34 +1,36 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import trainingCenterImage from "@/assets/gallery/chessnation_training_center_interior.png";
 import tournamentVenueImage from "@/assets/gallery/chessnation_tournament_venue.png";
-import officeReceptionImage from "@/assets/gallery/chessnation_office_reception.png";
 import coachingSessionImage from "@/assets/gallery/chessnation_coaching_session.png";
 import groupClassImage from "@/assets/gallery/chessnation_group_class.png";
-import technologyLabImage from "@/assets/gallery/chessnation_technology_lab.png";
+import onlineCoachingImage from "@/assets/gallery/online_coaching_session.png";
+import virtualBoardImage from "@/assets/gallery/virtual_chess_board.png";
+import analysisDashboardImage from "@/assets/gallery/chess_analysis_dashboard.png";
 
 const galleryImages = [
   {
     id: 1,
-    src: trainingCenterImage,
-    title: "Training Center",
-    description: "Our state-of-the-art chess training facility where champions are made",
+    src: onlineCoachingImage,
+    title: "Online Coaching Sessions",
+    description: "Live video coaching with expert instructors from anywhere in the world",
   },
   {
     id: 2,
-    src: tournamentVenueImage,
-    title: "Tournament Venue",
-    description: "Professional tournament space hosting competitive chess events",
+    src: virtualBoardImage,
+    title: "Virtual Chess Boards",
+    description: "Interactive digital boards for real-time training and analysis",
   },
   {
     id: 3,
-    src: officeReceptionImage,
-    title: "Welcome Area",
-    description: "Our welcoming reception area showcasing chess achievements",
+    src: analysisDashboardImage,
+    title: "AI-Powered Analysis",
+    description: "Advanced analytics dashboards for tracking progress and improvement",
   },
   {
     id: 4,
@@ -38,15 +40,15 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: groupClassImage,
-    title: "Group Classes",
-    description: "Engaging group lessons for young chess enthusiasts",
+    src: tournamentVenueImage,
+    title: "Tournament Venue",
+    description: "Professional tournament space hosting competitive chess events",
   },
   {
     id: 6,
-    src: technologyLabImage,
-    title: "Technology Lab",
-    description: "Advanced chess technology and digital training resources",
+    src: groupClassImage,
+    title: "Group Classes",
+    description: "Engaging group lessons for young chess enthusiasts",
   },
 ];
 
@@ -62,8 +64,8 @@ const Gallery = () => {
                 ChessNation Gallery
               </h1>
               <p className="text-lg text-muted-foreground" data-testid="text-gallery-subtitle">
-                Take a virtual tour of our world-class chess training facilities and see 
-                where champions are developed through structured programs and cutting-edge technology.
+                Explore our online training platform, virtual coaching sessions, and tournament 
+                events where champions are developed through structured programs and cutting-edge technology.
               </p>
             </div>
 
@@ -106,14 +108,16 @@ const Gallery = () => {
             </div>
 
             <div className="mt-16 text-center glass-panel p-8 max-w-3xl mx-auto">
-              <h2 className="text-2xl font-heading font-bold mb-4">Visit Us</h2>
+              <h2 className="text-2xl font-heading font-bold mb-4">Start Training Online</h2>
               <p className="text-muted-foreground mb-4">
-                Want to see our facilities in person? Schedule a visit to experience 
-                ChessNation's training environment firsthand.
+                Ready to experience ChessNation's online training platform? 
+                Contact us to schedule your evaluation and begin your chess journey.
               </p>
-              <p className="text-sm text-muted-foreground">
-                11340 Lakefield Dr, STE#200, Johns Creek, GA 30097
-              </p>
+              <Link to="/contact">
+                <Button variant="hero" data-testid="button-gallery-contact">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
