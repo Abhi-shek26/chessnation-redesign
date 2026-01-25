@@ -46,13 +46,15 @@ src/
 ## Pages
 
 1. **Home** - Hero with mission, three core pillars (Training, Technology, Ecosystem), section teasers
-2. **Training** - Training philosophy, structured development, tournament preparation, inquiry CTA
+2. **Training** - Online-first training, live coaching, AI analysis, virtual boards, training games, pricing inquiry
 3. **Tournaments** - Tournament categories (Scholastic, Open/Rated, Championships), upcoming events
 4. **Technology** - ChessEvents.AI platform for players and organizers
 5. **Franchise** - Training, Tournament, and Hybrid franchise models
 6. **Initiatives** - Women & Girls chess, Regional championships, Community impact
-7. **About** - Mission, vision, core pillars, leadership (Dr. Antony Joseph)
-8. **Contact** - Contact form with email, phone, address, social links
+7. **Sponsorship** - Sponsor a student, tournament sponsorship, Hall of Fame recognition
+8. **Gallery** - Online training visuals, virtual coaching, tournament images
+9. **About** - Mission, vision, core pillars, team overview
+10. **Contact** - Contact form with email, phone, address, social links
 
 ## Contact Information
 - Email: chessnation.us@gmail.com
@@ -81,16 +83,25 @@ Static deployment configured:
 - Public directory: `dist`
 
 ## Recent Changes
+- January 2026: Major content updates
+  - **Online-First Training Model**: Updated all training messaging to emphasize online delivery
+  - **New Sponsorship Page**: Sponsor a student, tournament sponsorship, Hall of Fame
+  - **Gallery Updates**: Removed Welcome Area and Technology Lab, added online training images
+  - **Leadership Removed**: Replaced with neutral team positioning
+  - **Pricing Hidden**: All prices replaced with "Contact for Pricing" CTAs
+  - **Training Games Section**: Added to Training page
+  - Generated 3 new AI images for online coaching/virtual boards/analytics
+  
 - January 2026: Complete website modernization
-  - Updated to 9-page architecture (added Gallery page)
+  - Updated to 10-page architecture
   - New mission and positioning focused on training
   - Added ChessEvents.AI technology section
   - Added Franchise and Initiatives pages
-  - Added Gallery page with 6 AI-generated facility images
+  - Added Gallery page with AI-generated images
   - Updated contact information
   - New navigation structure
   - Hero section with golden "Royal" text and enlarged "Conquer the World"
-  - Glass-panel styling (glass-panel-strong) on all page headers for improved readability
+  - Glass-panel styling on all page headers for improved readability
   - Background images visible at 50% opacity with gradient overlay
   - EmailJS integration for contact form (requires VITE_EMAILJS_* env vars)
   - Login page with coming soon placeholder
