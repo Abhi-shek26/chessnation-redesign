@@ -5,6 +5,8 @@ import { useTheme } from "@/hooks/use-theme";
 import { Link, useLocation } from "react-router-dom";
 import logoImage from "@/assets/logo.png";
 
+// Note: Sparkles and Button are used in mobile menu
+
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Training", href: "/training" },
@@ -60,14 +62,14 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-1 bg-secondary/50 rounded-full px-2 py-1 backdrop-blur-sm">
+          <div className="hidden xl:flex items-center gap-0.5 bg-secondary/50 rounded-full px-1.5 py-1 backdrop-blur-sm">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`relative px-4 py-2 font-medium transition-all rounded-full ${
+                  className={`relative px-3 py-1.5 text-sm font-medium transition-all rounded-full ${
                     isActive 
                       ? 'text-primary bg-primary/10 shadow-sm' 
                       : 'text-muted-foreground hover:text-foreground hover:bg-background/80'
@@ -84,32 +86,27 @@ const Navbar = () => {
           </div>
 
           {/* Right side actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="relative w-11 h-11 rounded-xl bg-secondary/80 hover:bg-secondary flex items-center justify-center transition-all duration-300 group overflow-hidden border border-border/50"
+              className="relative w-10 h-10 rounded-xl bg-secondary/80 hover:bg-secondary flex items-center justify-center transition-all duration-300 group overflow-hidden border border-border/50"
               aria-label="Toggle theme"
+              data-testid="button-theme-toggle"
             >
-              <Sun className={`w-5 h-5 absolute transition-all duration-500 ${
+              <Sun className={`w-4 h-4 absolute transition-all duration-500 ${
                 theme === 'light' ? 'rotate-0 opacity-100 scale-100' : 'rotate-90 opacity-0 scale-50'
               } text-primary`} />
-              <Moon className={`w-5 h-5 absolute transition-all duration-500 ${
+              <Moon className={`w-4 h-4 absolute transition-all duration-500 ${
                 theme === 'dark' ? 'rotate-0 opacity-100 scale-100' : '-rotate-90 opacity-0 scale-50'
               } text-primary`} />
             </button>
 
-            <Link to="/contact" className="hidden sm:flex">
-              <Button variant="hero" size="sm" className="gap-2">
-                <Sparkles className="w-4 h-4" />
-                Join Training
-              </Button>
-            </Link>
-
             {/* Mobile menu button */}
             <button
-              className="lg:hidden w-11 h-11 rounded-xl bg-secondary/80 hover:bg-secondary flex items-center justify-center transition-colors border border-border/50"
+              className="xl:hidden w-10 h-10 rounded-xl bg-secondary/80 hover:bg-secondary flex items-center justify-center transition-colors border border-border/50"
               onClick={() => setIsOpen(!isOpen)}
+              data-testid="button-mobile-menu"
             >
               <div className="relative w-5 h-5">
                 <X className={`w-5 h-5 absolute transition-all duration-300 ${isOpen ? 'rotate-0 opacity-100' : 'rotate-90 opacity-0'}`} />
@@ -120,7 +117,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile nav */}
-        <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
+        <div className={`xl:hidden transition-all duration-500 overflow-hidden ${
           isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="bg-card/98 backdrop-blur-2xl border-t border-border/20">
