@@ -43,14 +43,14 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group flex-shrink-0 mr-4">
             <img 
               src={logoImage} 
               alt="ChessNation Logo" 
               className="w-16 h-16 object-contain group-hover:scale-105 transition-all duration-300"
             />
             <div className="hidden sm:flex flex-col">
-              <span className="font-heading text-xl font-bold gradient-text leading-tight">
+              <span className="font-heading text-xl font-bold gradient-text leading-tight whitespace-nowrap">
                 ChessNation
               </span>
               <span className="text-[9px] text-muted-foreground font-medium tracking-wider uppercase whitespace-nowrap">
