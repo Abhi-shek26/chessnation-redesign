@@ -133,9 +133,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-6 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-muted-foreground">
-            © 2026 ChessNation.Us. All rights reserved.
+        <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © 2025 ChessNation. All rights reserved.
           </p>
         </div>
       </div>
