@@ -199,11 +199,11 @@
   }
 
   .glass-panel {
-    @apply backdrop-blur-md bg-background/70 border border-border/30 rounded-xl;
+    @apply backdrop-blur-md bg-background/85 border border-border/50 rounded-xl shadow-md;
   }
 
   .glass-panel-strong {
-    @apply backdrop-blur-xl bg-background/80 border border-border/40 rounded-xl shadow-lg;
+    @apply backdrop-blur-xl bg-background/95 border border-border/60 rounded-xl shadow-xl;
   }
 
   .hover-lift {

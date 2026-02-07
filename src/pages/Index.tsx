@@ -11,9 +11,13 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       <Navbar />
       <main className="relative z-10">
+        <div className="absolute inset-0 bg-chess-board opacity-40" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px]" />
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-accent/5 rounded-full blur-[60px]" />
+      
         <HeroSection />
         
-        <section className="py-20 bg-secondary/30">
+        <section className="py-20 bg-secondary/70">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4" data-testid="text-training-overview">
@@ -108,7 +112,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-secondary/30">
+        <section className="py-20 bg-secondary/70">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4" data-testid="text-technology-teaser">

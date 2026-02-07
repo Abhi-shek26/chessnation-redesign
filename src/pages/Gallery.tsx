@@ -5,50 +5,28 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 
-import trainingCenterImage from "@/assets/gallery/chessnation_training_center_interior.png";
-import tournamentVenueImage from "@/assets/gallery/chessnation_tournament_venue.png";
-import coachingSessionImage from "@/assets/gallery/chessnation_coaching_session.png";
-import groupClassImage from "@/assets/gallery/chessnation_group_class.png";
 import onlineCoachingImage from "@/assets/gallery/online_coaching_session.png";
-import virtualBoardImage from "@/assets/gallery/virtual_chess_board.png";
-import analysisDashboardImage from "@/assets/gallery/chess_analysis_dashboard.png";
+import groupClassImage from "@/assets/gallery/chessnation_group_class.png";
+import coachingSessionImage from "@/assets/gallery/chessnation_coaching_session.png";
 
 const galleryImages = [
   {
     id: 1,
     src: onlineCoachingImage,
-    title: "Online Coaching Sessions",
-    description: "Live video coaching with expert instructors from anywhere in the world",
+    title: "Online 1-1 Training",
+    description: "Personalized one-on-one coaching sessions with expert instructors via video",
   },
   {
     id: 2,
-    src: virtualBoardImage,
-    title: "Virtual Chess Boards",
-    description: "Interactive digital boards for real-time training and analysis",
+    src: groupClassImage,
+    title: "Online Group Classes",
+    description: "Interactive group lessons for chess enthusiasts learning together online",
   },
   {
     id: 3,
-    src: analysisDashboardImage,
-    title: "AI-Powered Analysis",
-    description: "Advanced analytics dashboards for tracking progress and improvement",
-  },
-  {
-    id: 4,
     src: coachingSessionImage,
-    title: "One-on-One Coaching",
-    description: "Personalized coaching sessions with expert instructors",
-  },
-  {
-    id: 5,
-    src: tournamentVenueImage,
-    title: "Tournament Venue",
-    description: "Professional tournament space hosting competitive chess events",
-  },
-  {
-    id: 6,
-    src: groupClassImage,
-    title: "Group Classes",
-    description: "Engaging group lessons for young chess enthusiasts",
+    title: "Training Games with GM/IM/FM",
+    description: "Practice games and analysis sessions with titled chess masters",
   },
 ];
 
@@ -56,6 +34,9 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <div className="absolute inset-0 bg-chess-board opacity-40" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px]" />
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-accent/5 rounded-full blur-[60px]" />
       <main className="pt-24">
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
@@ -63,9 +44,12 @@ const Gallery = () => {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-gallery-title">
                 ChessNation Gallery
               </h1>
-              <p className="text-lg text-muted-foreground" data-testid="text-gallery-subtitle">
-                Explore our online training platform, virtual coaching sessions, and tournament 
-                events where champions are developed through structured programs and cutting-edge technology.
+              <p className="text-lg text-muted-foreground mb-4" data-testid="text-gallery-subtitle">
+                Explore our online training programs where champions are developed through structured 
+                coaching and cutting-edge technology.
+              </p>
+              <p className="text-lg font-semibold text-primary" data-testid="text-gallery-online-focus">
+                Online coaching is our primary mode.
               </p>
             </div>
 

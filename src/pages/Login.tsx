@@ -47,7 +47,7 @@ const Login = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${chessBgImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/20 to-background/30" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-md mx-auto">

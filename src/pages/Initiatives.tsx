@@ -35,10 +35,10 @@ const Initiatives = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${initiativesBgImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/20 to-background/30" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
@@ -78,7 +78,7 @@ const Initiatives = () => {
               ))}
             </div>
 
-            <div className="bg-secondary/30 rounded-xl p-8 md:p-12 mb-16">
+            <div className="bg-secondary/80 rounded-xl p-8 md:p-12 mb-16 shadow-md">
               <div className="max-w-3xl mx-auto text-center">
                 <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
@@ -99,7 +99,7 @@ const Initiatives = () => {
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="bg-secondary/80 rounded-xl p-8 md:p-12 text-center shadow-md">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
                 Get Involved
               </h2>

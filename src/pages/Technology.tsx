@@ -12,10 +12,10 @@ const Technology = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${technologyBgImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/20 to-background/30" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
@@ -24,11 +24,11 @@ const Technology = () => {
                 <span className="text-sm font-medium">ChessEvents.AI</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-technology-title">
-                Technology for Chess
+                AI-Powered Technology for Chess Tournaments
               </h1>
               <p className="text-lg text-muted-foreground mb-6" data-testid="text-technology-subtitle">
-                ChessNation is building cutting-edge chess technology to power the next generation 
-                of training, tournaments, and chess community engagement.
+                Revolutionizing chess tournaments with artificial intelligence and agentic automation 
+                that streamlines operations for players and organizers.
               </p>
               <Link to="/contact">
                 <Button variant="hero" size="lg" data-testid="button-early-access">
@@ -50,27 +50,30 @@ const Technology = () => {
                   <div className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <h4 className="font-medium">AI-Powered Training</h4>
+                      <h4 className="font-medium">Agentic Registration</h4>
                       <p className="text-sm text-muted-foreground">
-                        Personalized training recommendations based on your playing patterns and weaknesses.
+                        AI agents handle registration and reuse your profile across tournaments, 
+                        eliminating repetitive form-filling.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <BarChart3 className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <h4 className="font-medium">Performance Analytics</h4>
+                      <h4 className="font-medium">Faster Check-In</h4>
                       <p className="text-sm text-muted-foreground">
-                        Deep insights into your games with actionable improvement suggestions.
+                        Less time on paperwork, more time playing. Smart systems recognize you 
+                        and streamline the entire tournament experience.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Trophy className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <h4 className="font-medium">Tournament Management</h4>
+                      <h4 className="font-medium">Personalized Journey</h4>
                       <p className="text-sm text-muted-foreground">
-                        Easy registration, live pairings, and real-time results tracking.
+                        Get AI-powered tournament recommendations, intelligent reminders, and a 
+                        customized tournament experience based on your playing history.
                       </p>
                     </div>
                   </div>
@@ -88,27 +91,30 @@ const Technology = () => {
                   <div className="flex items-start gap-3">
                     <Shield className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <h4 className="font-medium">Fair Play Monitoring</h4>
+                      <h4 className="font-medium">Agentic Tournament Creation</h4>
                       <p className="text-sm text-muted-foreground">
-                        Advanced anti-cheating systems to maintain tournament integrity.
+                        AI agents handle tournament setup and management, letting you focus on the 
+                        chess while we handle the operations.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Cpu className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <h4 className="font-medium">Automated Operations</h4>
+                      <h4 className="font-medium">AI Does the Heavy Lifting</h4>
                       <p className="text-sm text-muted-foreground">
-                        Streamlined pairing, scoring, and reporting to reduce administrative burden.
+                        Automated publishing, updates, communications, and logistics coordination. 
+                        Our AI handles the tedious work.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <BarChart3 className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <h4 className="font-medium">Event Analytics</h4>
+                      <h4 className="font-medium">Complete Automation</h4>
                       <p className="text-sm text-muted-foreground">
-                        Comprehensive data on participation, performance, and engagement.
+                        Intelligent pairings, workflow automation, smart notifications, and seamless 
+                        operational management from start to finish.
                       </p>
                     </div>
                   </div>
@@ -116,25 +122,25 @@ const Technology = () => {
               </Card>
             </div>
 
-            <div className="bg-secondary/30 rounded-xl p-8 md:p-12 mb-16">
+            <div className="bg-secondary/80 rounded-xl p-8 md:p-12 mb-16 shadow-md">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 text-center">
-                Technology Vision
+                AI & Agentic Technology Vision
               </h2>
               <div className="max-w-3xl mx-auto text-center">
                 <p className="text-muted-foreground mb-6">
-                  We're building ChessEvents.AI as an integrated platform that brings together 
-                  training, competition, and community. Our goal is to make professional-grade 
-                  chess technology accessible to everyone—from scholastic programs to major championships.
+                  We're building ChessEvents.AI as an intelligent platform where AI agents handle 
+                  repetitive tasks, enable seamless experiences, and unlock new possibilities for 
+                  players and tournament organizers.
                 </p>
                 <p className="text-muted-foreground">
-                  The platform will seamlessly connect players, coaches, organizers, and chess 
-                  institutions into a unified ecosystem powered by artificial intelligence and 
-                  modern web technologies.
+                  From agentic registration systems that remember your preferences to automated 
+                  tournament operations that run themselves, our technology transforms how chess 
+                  events are organized and experienced.
                 </p>
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="bg-secondary/80 rounded-xl p-8 md:p-12 text-center shadow-md">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
                 Coming Soon
               </h2>

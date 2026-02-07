@@ -12,10 +12,10 @@ const Training = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${trainingBgImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/20 to-background/30" />
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
@@ -85,20 +85,65 @@ const Training = () => {
               </Card>
             </div>
 
-            <div className="bg-card/80 backdrop-blur-sm rounded-xl p-8 md:p-12 mb-16 border border-border">
+            <div className="bg-card/95 backdrop-blur-md rounded-xl p-8 md:p-12 mb-16 border border-border shadow-lg">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-center">
                 Pricing & Enrollment
               </h2>
-              <p className="text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
-                For pricing and enrollment details, please contact our Chess Training Coordinator.
+              <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+                Pricing: Please contact us for latest rates.
               </p>
-              <div className="flex justify-center">
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-secondary/70 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-center">Training Packages</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                      <span className="font-medium">4 classes/month</span>
+                      <span className="text-sm text-muted-foreground">Contact for rates</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                      <span className="font-medium">8 classes/month</span>
+                      <span className="text-sm text-muted-foreground">Contact for rates</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-secondary/70 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-center">Skill Tiers</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                      <span className="font-medium">Beginner</span>
+                      <span className="text-sm text-muted-foreground">Foundation skills</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                      <span className="font-medium">Advanced</span>
+                      <span className="text-sm text-muted-foreground">Competitive play</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                      <span className="font-medium">Elite</span>
+                      <span className="text-sm text-muted-foreground">Tournament prep</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link to="/contact">
-                  <Button variant="hero" size="lg" data-testid="button-pricing-inquiry">
+                  <Button variant="hero" size="lg" data-testid="button-pricing-contact">
                     <MessageSquare className="w-5 h-5 mr-2" />
                     Contact for Pricing
                   </Button>
                 </Link>
+                <a href="mailto:chessnation.us@gmail.com">
+                  <Button variant="outline" size="lg" data-testid="button-pricing-email">
+                    Email Us
+                  </Button>
+                </a>
+                <a href="tel:7708585756">
+                  <Button variant="outline" size="lg" data-testid="button-pricing-phone">
+                    Call Us
+                  </Button>
+                </a>
               </div>
             </div>
 
@@ -145,7 +190,7 @@ const Training = () => {
               </CardContent>
             </Card>
 
-            <div className="bg-secondary/30 rounded-xl p-8 md:p-12 text-center">
+            <div className="bg-secondary/80 rounded-xl p-8 md:p-12 text-center shadow-md">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
                 Ready to Start Your Chess Journey?
               </h2>

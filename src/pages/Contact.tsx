@@ -94,171 +94,178 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden flex flex-col">
+      {/* Fixed Background Layer */}
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${contactBgImage})` }} 
+      />
+      {/* Overlay for readability */}
+      <div className="fixed inset-0 z-0 bg-background/30 backdrop-blur-[2px]" />
+
       <Navbar />
-      <main className="pt-24 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-          style={{ backgroundImage: `url(${contactBgImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
-        <section className="py-16 md:py-24 relative z-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16 glass-panel-strong p-8">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6" data-testid="text-contact-title">
+      
+      <main className="flex-grow pt-24 relative z-10">
+        <section className="py-12 md:py-20">
+          <div className="container mx-auto px-4 max-w-6xl">
+            {/* Header Section */}
+            <div className="max-w-4xl mx-auto text-center mb-12 glass-panel-strong p-8 rounded-2xl border border-white/10">
+              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground" data-testid="text-contact-title">
                 Contact Us
               </h1>
-              <p className="text-lg text-muted-foreground" data-testid="text-contact-subtitle">
-                Ready to start your chess journey? Have questions about our programs? 
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
+                Ready to start your chess journey? Have questions about our programs?
                 We'd love to hear from you.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-2xl font-heading font-bold mb-6">Get in Touch</h2>
-                
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium mb-1">Email</h3>
-                      <a 
-                        href="mailto:chessnation.us@gmail.com" 
-                        className="hover:text-primary transition-colors"
-                        data-testid="link-email"
-                      >
-                        chessnation.us@gmail.com
-                      </a>
+            {/* Grid Layout - Changed to 12 columns for better spacing */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              {/* Contact Info Panel - Spans 4 columns */}
+              <div className="lg:col-span-4 space-y-6">
+                <div className="relative group">
+                  <div className="relative bg-white/10 dark:bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"></div>
+
+                    <div className="relative z-10 space-y-6">
+                      <div>
+                        <h2 className="text-xl font-heading font-semibold text-foreground mb-4">Get in Touch</h2>
+                      </div>
+
+                      <div className="space-y-4">
+                        <a href="mailto:chessnation.us@gmail.com" className="flex items-center gap-3 group/item hover:translate-x-1 transition-transform">
+                          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                            <Mail className="w-5 h-5 text-primary" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-sm font-medium text-foreground/70">Email</p>
+                            <p className="text-sm text-foreground font-semibold truncate group-hover/item:text-primary transition-colors">chessnation.us@gmail.com</p>
+                          </div>
+                        </a>
+
+                        <a href="tel:7708585756" className="flex items-center gap-3 group/item hover:translate-x-1 transition-transform">
+                          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                            <Phone className="w-5 h-5 text-primary" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-sm font-medium text-foreground/70">Phone</p>
+                            <p className="text-sm text-foreground font-semibold group-hover/item:text-primary transition-colors">(770) 858-5756</p>
+                          </div>
+                        </a>
+
+                        <div className="flex items-start gap-3">
+                          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                            <MapPin className="w-5 h-5 text-primary" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-sm font-medium text-foreground/70">Location</p>
+                            <p className="text-sm text-foreground leading-snug">
+                              11340 Lakefield Dr<br />
+                              Johns Creek, GA 30097
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-4 pt-4 border-t border-white/10">
+                        <a
+                          href="https://youtube.com/@chessnation_us?si=FZGjqDcHPHDhReRG"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-red-600/20 hover:bg-red-600/40 flex items-center justify-center transition-all hover:scale-110"
+                        >
+                          <Youtube className="w-5 h-5 text-red-500" />
+                        </a>
+                        <a
+                          href="https://www.facebook.com/profile.php?id=61570828734641"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-blue-600/20 hover:bg-blue-600/40 flex items-center justify-center transition-all hover:scale-110"
+                        >
+                          <Facebook className="w-5 h-5 text-blue-500" />
+                        </a>
+                      </div>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium mb-1">Phone</h3>
-                      <a 
-                        href="tel:7708585756" 
-                        className="hover:text-primary transition-colors"
-                        data-testid="link-phone"
-                      >
-                        (770) 858-5756
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium mb-1">Location</h3>
-                      <p data-testid="text-address">
-                        11340 Lakefield Dr, STE#200<br />
-                        Johns Creek, GA 30097
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="font-medium mb-4">Follow Us</h3>
-                <div className="flex gap-4">
-                  <a 
-                    href="https://youtube.com/@chessnation_us?si=FZGjqDcHPHDhReRG" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                    data-testid="link-youtube"
-                  >
-                    <Youtube className="w-5 h-5" />
-                  </a>
-                  <a 
-                    href="https://www.facebook.com/profile.php?id=61570828734641" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                    data-testid="link-facebook"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
                 </div>
               </div>
 
-              <Card>
-                <CardContent className="p-8">
+              {/* Empty Spacer Column - Spans 1 column (Hidden on mobile) */}
+              <div className="hidden lg:block lg:col-span-1" />
+
+              {/* Form Card - Spans 7 columns */}
+              <Card className="lg:col-span-7 bg-card/90 dark:bg-card/60 backdrop-blur-sm border-white/20 shadow-2xl">
+                <CardContent className="p-6 md:p-8">
                   <h2 className="text-2xl font-heading font-bold mb-6">Send a Message</h2>
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Name *</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your name" {...field} data-testid="input-name" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email *</FormLabel>
-                            <FormControl>
-                              <Input type="email" placeholder="your@email.com" {...field} data-testid="input-email" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Phone (optional)</FormLabel>
-                            <FormControl>
-                              <Input type="tel" placeholder="(123) 456-7890" {...field} data-testid="input-phone" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="interest"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Area of Interest *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Name *</FormLabel>
                               <FormControl>
-                                <SelectTrigger data-testid="select-interest">
-                                  <SelectValue placeholder="Select an area" />
-                                </SelectTrigger>
+                                <Input placeholder="Your name" {...field} className="bg-background/50" />
                               </FormControl>
-                              <SelectContent>
-                                <SelectItem value="training">Training</SelectItem>
-                                <SelectItem value="tournaments">Tournaments</SelectItem>
-                                <SelectItem value="franchise">Franchise</SelectItem>
-                                <SelectItem value="technology">Technology</SelectItem>
-                                <SelectItem value="general">General Inquiry</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                              <FormMessage />
+                            </FormItem>
+                          )} />
+
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email *</FormLabel>
+                              <FormControl>
+                                <Input type="email" placeholder="your@email.com" {...field} className="bg-background/50" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )} />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Phone (optional)</FormLabel>
+                              <FormControl>
+                                <Input type="tel" placeholder="(123) 456-7890" {...field} className="bg-background/50" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )} />
+
+                        <FormField
+                          control={form.control}
+                          name="interest"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Area of Interest *</FormLabel>
+                              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormControl>
+                                  <SelectTrigger className="bg-background/50">
+                                    <SelectValue placeholder="Select an area" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  <SelectItem value="training">Training</SelectItem>
+                                  <SelectItem value="tournaments">Tournaments</SelectItem>
+                                  <SelectItem value="franchise">Franchise</SelectItem>
+                                  <SelectItem value="technology">Technology</SelectItem>
+                                  <SelectItem value="general">General Inquiry</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )} />
+                      </div>
 
                       <FormField
                         control={form.control}
@@ -267,24 +274,21 @@ const Contact = () => {
                           <FormItem>
                             <FormLabel>Message *</FormLabel>
                             <FormControl>
-                              <Textarea 
-                                placeholder="Tell us how we can help you..." 
-                                className="min-h-[120px]" 
-                                {...field} 
-                                data-testid="input-message"
-                              />
+                              <Textarea
+                                placeholder="Tell us how we can help you..."
+                                className="min-h-[150px] bg-background/50"
+                                {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                        )} />
 
-                      <Button 
-                        type="submit" 
-                        variant="hero" 
-                        className="w-full" 
+                      <Button
+                        type="submit"
+                        variant="default"
+                        size="lg"
+                        className="w-full md:w-auto"
                         disabled={isSubmitting}
-                        data-testid="button-submit"
                       >
                         {isSubmitting ? "Sending..." : "Send Message"}
                         <Send className="w-4 h-4 ml-2" />

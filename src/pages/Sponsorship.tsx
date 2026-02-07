@@ -12,10 +12,10 @@ const Sponsorship = () => {
       <Navbar />
       <main className="pt-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: `url(${initiativesBgImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/20 to-background/30" />
         
         <section className="py-16 md:py-24 relative z-10">
           <div className="container mx-auto px-4">
@@ -81,7 +81,7 @@ const Sponsorship = () => {
               </Card>
             </div>
 
-            <div className="bg-card/80 backdrop-blur-sm rounded-xl p-8 md:p-12 mb-16 border border-border">
+            <div className="bg-card/95 backdrop-blur-md rounded-xl p-8 md:p-12 mb-16 border border-border shadow-lg">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 text-center">
                 Sponsor Benefits
               </h2>
@@ -159,7 +159,7 @@ const Sponsorship = () => {
                 </div>
                 
                 <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="bg-secondary/30 rounded-xl p-6">
+                  <div className="bg-secondary/70 rounded-xl p-6">
                     <h4 className="font-semibold mb-3">Permanent Recognition</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-center gap-2">
@@ -176,7 +176,7 @@ const Sponsorship = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-secondary/30 rounded-xl p-6">
+                  <div className="bg-secondary/70 rounded-xl p-6">
                     <h4 className="font-semibold mb-3">Ongoing Visibility</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-center gap-2">
@@ -197,7 +197,7 @@ const Sponsorship = () => {
               </CardContent>
             </Card>
 
-            <div className="bg-secondary/30 rounded-xl p-8 md:p-12 text-center">
+            <div className="bg-secondary/80 rounded-xl p-8 md:p-12 text-center shadow-md">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
                 Become a Sponsor
               </h2>
